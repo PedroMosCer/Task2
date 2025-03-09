@@ -5,6 +5,7 @@
 package original;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -20,15 +21,25 @@ public class Original {
         ArrayList<Integer> listaEnteros = new ArrayList<>();
         Random random = new Random();
 
-        // Se generan 10 números aleatorios entre 1 y 100
+        // Generar 10 números aleatorios entre 1 y 100
         for (int i = 0; i < 10; i++) {
             int valorAleatorio = random.nextInt(100) + 1; // genera un entero entre 1 y 100
             listaEnteros.add(valorAleatorio);
         }
         
-        // Se muestran los números en la consola
-        for (int i = 0; i < listaEnteros.size(); i++) {
-            System.out.println(listaEnteros.get(i));
+        // Mostrar la lista original
+        System.out.println("Lista original:");
+        for (Integer num : listaEnteros) {
+            System.out.println(num);
+        }
+        
+        // Ordenar la lista de menor a mayor
+        Collections.sort(listaEnteros);
+        
+        // Mostrar la lista ordenada
+        System.out.println("\nLista ordenada:");
+        for (Integer num : listaEnteros) {
+            System.out.println(num);
         }
     }
     
