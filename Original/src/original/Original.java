@@ -5,6 +5,7 @@
 package original;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -16,11 +17,17 @@ public class Original {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList <Integer> listaEnteros = new ArrayList <>();
-        for (int i=0;i<10;i++){
-            listaEnteros.add(i+1);
+        ArrayList<Integer> listaEnteros = new ArrayList<>();
+        Random random = new Random();
+
+        // Se generan 10 números aleatorios entre 1 y 100
+        for (int i = 0; i < 10; i++) {
+            int valorAleatorio = random.nextInt(100) + 1; // genera un entero entre 1 y 100
+            listaEnteros.add(valorAleatorio);
         }
-        for (int i=0;i<10;i++){
+        
+        // Se muestran los números en la consola
+        for (int i = 0; i < listaEnteros.size(); i++) {
             System.out.println(listaEnteros.get(i));
         }
     }
