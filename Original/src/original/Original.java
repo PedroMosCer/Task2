@@ -4,6 +4,8 @@
  */
 package original;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author pedro
@@ -14,7 +16,13 @@ public class Original {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ArrayList <Integer> listaEnteros = new ArrayList <>();
+        for (int i=0;i<10;i++){
+            listaEnteros.add(i+1);
+        }
+        for (int i=0;i<10;i++){
+            System.out.println(listaEnteros.get(i));
+        }
     }
     
 }
